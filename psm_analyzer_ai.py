@@ -844,14 +844,17 @@ if uploaded_file is not None:
                 ai_insights_html = ai_insights.replace('\n', '<br>')
                 st.markdown(f"""
                 <div style="
-                    background-color: #E7F5FF;
+                    background-color: #F8FCFF;
                     padding: 20px;
                     border-radius: 10px;
                     border-left: 5px solid #0066CC;
                     margin-bottom: 20px;
+                    color: #2C3E50;
                 ">
                 <h3 style="color: #0066CC; margin-top: 0;">🤖 AIインサイト</h3>
+                <div style="color: #2C3E50; line-height: 1.6;">
                 {ai_insights_html}
+                </div>
                 </div>
                 """, unsafe_allow_html=True)
 
