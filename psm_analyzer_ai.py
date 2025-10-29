@@ -21,10 +21,22 @@ load_dotenv()
 
 # ページ設定
 st.set_page_config(
-    page_title="PSM分析自動レポートツール（AI版）",
-    page_icon="📊",
+    page_title="PSM価格分析 | Claude AI搭載の自動レポートツール",
+    page_icon="💰",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://github.com/matsuwo3/psm-analyzer',
+        'Report a bug': 'https://github.com/matsuwo3/psm-analyzer/issues',
+        'About': '''
+        ## PSM分析自動レポートツール
+
+        Claude AIを活用した高度な価格感度分析ツール。
+        CSVアップロードだけで、PSM分析結果とビジネスインサイトを自動生成します。
+
+        **開発**: 2025年10月 | **AI**: Claude Sonnet 4.5
+        '''
+    }
 )
 
 # セッション状態の初期化
@@ -43,10 +55,11 @@ def check_password():
     if st.session_state.authenticated:
         return True
 
-    st.title("🔐 PSM分析ツール（AI版）")
+    st.title("💰 PSM価格分析ツール")
+    st.markdown("### Claude AI搭載の自動レポート生成")
     st.markdown("---")
-    st.markdown("### ログイン")
-    st.info("このアプリケーションを使用するには、パスワードを入力してください。")
+    st.markdown("### 🔐 ログイン")
+    st.info("💡 このツールを使用するには、パスワードが必要です。")
 
     password = st.text_input("パスワード", type="password", key="password_input")
 
@@ -597,7 +610,8 @@ if not check_password():
 
 # サイドバー
 with st.sidebar:
-    st.title("📊 PSM分析ツール（AI版）")
+    st.title("💰 PSM価格分析")
+    st.caption("Claude AI搭載")
 
     st.markdown("---")
 
@@ -983,13 +997,14 @@ if uploaded_file is not None:
 
 else:
     # 初期画面
-    st.title("📊 PSM分析自動レポートツール（AI版）")
+    st.title("💰 PSM価格分析ツール")
+    st.markdown("## Claude AI搭載の自動レポート生成")
 
     st.markdown("""
-    ### Claude AIを活用した高度なPSM分析
+    ### 🚀 CSVアップロードだけで、価格戦略が見える
 
-    このツールは、Van WestendorpのPrice Sensitivity Meter（PSM）分析を自動化し、
-    Anthropic Claude APIによる深いインサイトを提供します。
+    Van WestendorpのPrice Sensitivity Meter（PSM）分析を自動化。
+    Claude AIが最適な価格設定と具体的なアクションプランを提案します。
 
     #### 主な機能
 
