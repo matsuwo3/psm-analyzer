@@ -47,6 +47,54 @@ if 'analysis_complete' not in st.session_state:
 if 'api_key' not in st.session_state:
     st.session_state.api_key = os.environ.get('ANTHROPIC_API_KEY', '')
 
+# SEO対策: メタタグを追加
+st.markdown("""
+<script>
+    // メタディスクリプションを追加
+    var metaDescription = document.querySelector('meta[name="description"]');
+    if (!metaDescription) {
+        metaDescription = document.createElement('meta');
+        metaDescription.name = 'description';
+        metaDescription.content = 'PSM（価格感度分析）を自動化するAIツール。CSVをアップロードするだけで、Claude AIが最適価格と具体的な価格戦略を提案。OPP、IDP、PMC、PMEを自動計算し、ビジネスインサイトをExcelレポートで出力。';
+        document.head.appendChild(metaDescription);
+    }
+
+    // OGPタグを追加
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    if (!ogTitle) {
+        ogTitle = document.createElement('meta');
+        ogTitle.setAttribute('property', 'og:title');
+        ogTitle.content = 'PSM価格分析 | Claude AI搭載の自動レポートツール';
+        document.head.appendChild(ogTitle);
+    }
+
+    var ogDescription = document.querySelector('meta[property="og:description"]');
+    if (!ogDescription) {
+        ogDescription = document.createElement('meta');
+        ogDescription.setAttribute('property', 'og:description');
+        ogDescription.content = 'CSVアップロードだけで価格戦略が見える。AIが最適な価格設定と具体的なアクションプランを提案します。';
+        document.head.appendChild(ogDescription);
+    }
+
+    var ogType = document.querySelector('meta[property="og:type"]');
+    if (!ogType) {
+        ogType = document.createElement('meta');
+        ogType.setAttribute('property', 'og:type');
+        ogType.content = 'website';
+        document.head.appendChild(ogType);
+    }
+
+    // キーワードメタタグを追加
+    var keywords = document.querySelector('meta[name="keywords"]');
+    if (!keywords) {
+        keywords = document.createElement('meta');
+        keywords.name = 'keywords';
+        keywords.content = 'PSM分析,価格感度分析,価格戦略,AI,Claude,価格設定,マーケティング,OPP,IDP,PMC,PME,Van Westendorp';
+        document.head.appendChild(keywords);
+    }
+</script>
+""", unsafe_allow_html=True)
+
 # パスワード認証
 APP_PASSWORD = "test19921001"
 
