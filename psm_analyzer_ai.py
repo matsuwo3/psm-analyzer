@@ -36,7 +36,7 @@ if 'api_key' not in st.session_state:
     st.session_state.api_key = os.environ.get('ANTHROPIC_API_KEY', '')
 
 # パスワード認証
-APP_PASSWORD = "matsuo1234"
+APP_PASSWORD = "test19921001"
 
 def check_password():
     """パスワード認証を行う"""

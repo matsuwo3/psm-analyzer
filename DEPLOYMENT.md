@@ -35,7 +35,7 @@ ANTHROPIC_API_KEY = "your-api-key-here"
 ## 🔐 認証情報
 
 ### アプリパスワード
-- **パスワード**: `matsuo1234`
+- **パスワード**: `test19921001`
 - **設定場所**: `psm_analyzer_ai.py` の `APP_PASSWORD` 変数
 
 ### Claude API
