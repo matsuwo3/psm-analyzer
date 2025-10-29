@@ -649,7 +649,7 @@ with st.sidebar:
     with st.expander("🔗 リンク", expanded=False):
         st.markdown("""
         - [Anthropic API](https://console.anthropic.com/)
-        - [PSM分析について](https://ja.wikipedia.org/wiki/価格感度分析)
+        - [PSM分析について](https://www.macromill.com/service/data-analysis/price-sensitivity-meter/)
         - [サンプルデータ](./sample_data.csv)
         """)
 
